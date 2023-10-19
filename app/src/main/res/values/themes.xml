@@ -1,0 +1,11 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Theme.YourPetCareReminderApp" parent="Theme.AppCompat.Light.DarkActionBar">
+        <item name="colorPrimaryDark">#D5CAD6</item>
+        <item name="colorOnPrimary">@color/white</item>
+        <!-- Status bar color. -->
+        <item name="android:statusBarColor" tools:targetApi="21">@color/black</item>
+        <!-- Customize your theme here. -->
+    </style>
+</resources>
+

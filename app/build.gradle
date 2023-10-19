@@ -1,0 +1,65 @@
+plugins {
+    id 'com.android.application'
+}
+
+allprojects {
+    // ...
+    configurations.all {
+        resolutionStrategy {
+            force 'com.google.firebase:firebase-common:17.0.0'
+            force 'com.google.android.gms:play-services-basement:16.2.0'
+            force 'com.google.firebase:firebase-iid:16.0.0'
+            force 'com.google.firebase:firebase-auth:17.0.0'
+        }
+    }
+}
+
+android {
+    namespace 'com.example.yourpetcarereminderapp'
+    compileSdk 33
+
+    defaultConfig {
+        applicationId "com.example.yourpetcarereminderapp"
+        minSdk 19
+        targetSdk 33
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+    buildFeatures{
+        viewBinding {
+            enabled true
+        }
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    if (hasProperty('buildScan')) {
+        buildScan {
+            termsOfServiceUrl = 'https://gradle.com/terms-of-service'
+            termsOfServiceAgree = 'yes'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+}
+
+dependencies {
+    implementation 'androidx.appcompat:appcompat:1.4.1'
+    implementation 'com.google.android.material:material:1.5.0'
+    implementation 'androidx.constraintlayout:constraintlayout:2.1.3'
+    implementation 'androidx.exifinterface:exifinterface:1.3.3'
+    testImplementation 'junit:junit:4.13.2'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.3'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.4.0'
+}
+
+
+

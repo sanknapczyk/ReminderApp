@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This XML file represents the layout for the Reminder activity -->
+
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#A0949C"
+    tools:context=".Reminder">
+
+    <!-- Button for saving the reminder -->
+    <Button
+        android:id="@+id/saveRmdBtn1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="125dp"
+        android:fontFamily="sans-serif-medium"
+        android:text="SAVE"
+        android:textColor="#6B5E62"
+        android:textSize="20sp"
+        app:backgroundTint="#EFEFF0"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <!-- Button for selecting the reminder time -->
+    <Button
+        android:id="@+id/selectTime"
+        android:layout_width="330dp"
+        android:layout_height="54dp"
+        android:layout_marginTop="38dp"
+        android:fontFamily="sans-serif-medium"
+        android:text="SELECT TIME"
+        android:textColor="#6B5E62"
+        android:textSize="20sp"
+        app:backgroundTint="#EFEFF0"
+        android:onClick="popTimePicker"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/frequencySpinner1" />
+
+    <!-- TextView for displaying the reminder text -->
+    <TextView
+        android:id="@+id/reminderText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:layout_marginBottom="86dp"
+        android:fontFamily="serif-monospace"
+        android:text=""
+        android:textAlignment="center"
+        android:textColor="#EAFFFD"
+        android:textSize="42sp"
+        app:layout_constraintBottom_toTopOf="@+id/durationSpinner1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!-- Spinner for selecting the duration -->
+    <Spinner
+        android:id="@+id/durationSpinner1"
+        android:layout_width="330dp"
+        android:layout_height="54dp"
+        android:layout_marginTop="50dp"
+        android:background="#6B5E62"
+        android:spinnerMode="dropdown"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.493"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/reminderText" />
+
+    <!-- Spinner for selecting the frequency -->
+    <Spinner
+        android:id="@+id/frequencySpinner1"
+        android:layout_width="330dp"
+        android:layout_height="54dp"
+        android:layout_marginTop="38dp"
+        android:background="#6B5E62"
+        android:spinnerMode="dropdown"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.493"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/durationSpinner1" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This XML file represents the layout for the PetProfile activity -->
+
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".PetProfile"
+    android:background="#D5CAD6">
+
+    <!-- Button for editing the pet profile -->
+    <Button
+        android:id="@+id/editProfileBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:fontFamily="sans-serif-medium"
+        android:text="EDIT"
+        android:textColor="#6B5E62"
+        android:textColorHighlight="#EAFFFD"
+        android:textColorHint="#EAFFFD"
+        android:textColorLink="#EAFFFD"
+        android:textSize="20sp"
+        app:backgroundTint="#EFEFF0"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/reminderInfo" />
+
+    <!-- ImageView for displaying the pet's photo -->
+    <ImageView
+        android:id="@+id/petPhoto"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:layout_marginTop="32dp"
+        android:alpha="1"
+        android:clickable="true"
+        app:layout_constraintDimensionRatio="H,1:1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/petName"
+        app:srcCompat="@drawable/ic_launcher_background" />
+
+    <!-- TextView for displaying the pet's name -->
+    <TextView
+        android:id="@+id/petName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:fontFamily="serif-monospace"
+        android:hint="Pet Name"
+        android:textAlignment="center"
+        android:textColor="#EAFFFD"
+        android:textSize="40sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!-- TextView for displaying the reminder information -->
+    <TextView
+        android:id="@+id/reminderInfo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:fontFamily="serif-monospace"
+        android:hint="reminder info"
+        android:textColor="#6B5E62"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/petPhoto" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

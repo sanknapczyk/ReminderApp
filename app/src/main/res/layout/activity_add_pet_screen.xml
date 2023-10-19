@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This XML file represents the layout for the AddPetScreen activity -->
+
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#A0949C"
+    android:isScrollContainer="true"
+    tools:context=".AddPetScreen">
+
+    <!-- Button for adding a pet photo -->
+    <Button
+        android:id="@+id/addPhotoBtn"
+        android:layout_width="330dp"
+        android:layout_height="54dp"
+        android:layout_marginTop="17dp"
+        android:text="ADD PHOTO"
+        android:textColor="#6B5E62"
+        app:backgroundTint="#EFEFF0"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextTPetName" />
+
+    <!-- Button for adding a food reminder -->
+    <Button
+        android:id="@+id/foodBtn"
+        android:layout_width="330dp"
+        android:layout_height="54dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginBottom="15dp"
+        android:text="ADD FOOD REMINDER"
+        android:textColor="#6B5E62"
+        app:backgroundTint="#EFEFF0"
+        app:layout_constraintBottom_toTopOf="@+id/waterBtn"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/reminderTxt" />
+
+    <!-- Button for adding a water reminder -->
+    <Button
+        android:id="@+id/waterBtn"
+        android:layout_width="330dp"
+        android:layout_height="54dp"
+        android:layout_marginTop="24dp"
+        android:text="ADD WATER REMINDER"
+        android:textColor="#6B5E62"
+        app:backgroundTint="#EFEFF0"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/foodBtn" />
+
+    <!-- Button for adding a cleaning reminder -->
+    <Button
+        android:id="@+id/cleaningBtn"
+        android:layout_width="330dp"
+        android:layout_height="54dp"
+        android:layout_marginTop="24dp"
+        android:text="ADD CLEANING REMINDER"
+        android:textColor="#6B5E62"
+        app:backgroundTint="#EFEFF0"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/waterBtn" />
+
+    <!-- TextView for displaying the "Add your pet" text -->
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:fontFamily="serif-monospace"
+        android:text="Add your pet"
+        android:textAlignment="center"
+        android:textColor="#EAFFFD"
+        android:textSize="42sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!-- TextView for displaying the "Reminders" text -->
+    <TextView
+        android:id="@+id/reminderTxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="45dp"
+        android:fontFamily="serif-monospace"
+        android:text="Reminders"
+        android:textAlignment="center"
+        android:textColor="#EAFFFD"
+        android:textSize="34sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/addPhotoBtn" />
+
+    <!-- EditText for entering the pet's name -->
+    <EditText
+        android:id="@+id/editTextTPetName"
+        android:layout_width="330dp"
+        android:layout_height="54dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginBottom="15dp"
+        android:ems="10"
+        android:hint="Name"
+        android:inputType="textPersonName"
+        android:textColor="#6B5E62"
+        app:layout_constraintBottom_toTopOf="@+id/addPhotoBtn"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView3" />
+
+    <!-- Button for saving the pet information -->
+    <Button
+        android:id="@+id/savePetBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="sans-serif-medium"
+        android:text="SAVE"
+        android:textColor="#6B5E62"
+        android:textColorHighlight="#EAFFFD"
+        android:textColorHint="#EAFFFD"
+        android:textColorLink="#EAFFFD"
+        android:textSize="20sp"
+        app:backgroundTint="#EFEFF0"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cleaningBtn" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This XML file represents the main layout for the MainActivity -->
+
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#D5CAD6"
+    android:scrollbarSize="20dp"
+    android:textAlignment="center"
+    tools:context=".MainActivity">
+
+    <!-- Button for adding a pet -->
+    <Button
+        android:id="@+id/addPetBtn"
+        android:layout_width="341dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="16dp"
+        android:text="ADD PET"
+        android:textColor="#6B5E62"
+        android:textSize="20sp"
+        app:backgroundTint="#EFEFF0"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.514"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/appName"></Button>
+
+    <!-- TextView displaying the app name -->
+    <TextView
+        android:id="@+id/appName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:fontFamily="serif-monospace"
+        android:text="Your Pet Care Reminder"
+        android:textAlignment="center"
+        android:textColor="#EAFFFD"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!-- Button for viewing pet profiles -->
+    <Button
+        android:id="@+id/petProfileBtn"
+        android:layout_width="341dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="12dp"
+        android:text="YOUR PETS"
+        android:textColor="#6B5E62"
+        android:textSize="20sp"
+        app:backgroundTint="#EFEFF0"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/addPetBtn" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
